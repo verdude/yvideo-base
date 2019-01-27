@@ -12,5 +12,7 @@ RUN apk update && apk add bash && \
     cd /yvideo && \
     sbt compile
 
+RUN cd /yvideo && ls -1 | grep -v target | xargs rm -r
+
 WORKDIR /yvideo
 
